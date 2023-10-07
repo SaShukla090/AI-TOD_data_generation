@@ -39,18 +39,20 @@ git clone https://github.com/SaShukla090/AI-TOD_data_generation.git
 **Step 3:** Install required packages.
 
 * Required environment (make the conda env using using 'data/aitod/AI-TOD/conda_env_aitod.yml' file)
-'''
+```
 conda env create -f conda_env_aitod.yml
 conda activate aitod
 pip install -r requirements.txt
-'''
+```
 
 * [mmcv](https://github.com/open-mmlab/mmcv)  install mmcv==1.0 (don't isntall mmcv 2.0 version which is default)
 
-'''
+```
 pip install mmcv==1.0.0 -f https://download.openmmlab.com/mmcv/dist/cu118/torch2.0/index.html
+```
 
-'''
+
+
 
 
 **Step 4:** Run the E2E aitodtoolkit and get AI-TOD, it might take around an hour, then the full image sets of AI-TOD can be found in the **aitod** folder. And you can delete other files in other folders to avoid taking up too much space.
