@@ -1,17 +1,5 @@
 # AI-TOD
 
-[[Paper]](https://drive.google.com/file/d/1IiTp7gilwDCGr8QR_H9Covz8aVK7LXiI/view?usp=sharing) AI-TOD is a dataset for tiny object detection in aerial images.
-
-
-[[Dataset]](https://github.com/jwwangchn/AI-TOD) Please download the [xView trainig set](http://xviewdataset.org/#dataset) and [AI-TOD_wo_xview](https://1drv.ms/u/s!Ao5UiAkIbGJ7xHCGhQe2tsU1Ut5i?e=SrUdYp) to [construct](aitodtoolkit) the complete AI-TOD dataset!
-
-![](demo/samples.png)
-
-## Description
-
-AI-TOD comes with 700,621 object instances for eight categories across 28,036 aerial images. Compared to existing object detection datasets in aerial images, the mean size of objects in AI-TOD is about 12.8 pixels, which is much smaller than others.
-
-<img src="demo/size_ratios.png" width="500px" div align=center />
 
 ## Download 
 
@@ -27,7 +15,7 @@ You need to download the following two parts (Part1: xView training set, Part2: 
 **Step 1:** Download the xView training set, AI-TOD without xview, and clone the aitodtoolkit.
 
 ```
-git clone https://github.com/jwwangchn/AI-TOD.git
+git clone https://github.com/SaShukla090/AI-TOD_data_generation.git
 ```
 
 **Step 2:** Organize the downloaded files in the following way.
@@ -50,24 +38,20 @@ git clone https://github.com/jwwangchn/AI-TOD.git
 
 **Step 3:** Install required packages.
 
-* Required environment
-1. Python 3.7
-2. [mmcv](https://github.com/open-mmlab/mmcv)
-
-* Install [wwtool](https://github.com/jwwangchn/wwtool)
-
-```
-git clone https://github.com/jwwangchn/wwtool.git
-cd wwtool
-python setup.py develop
-```
-* Install other required packages
-
-```
-cd ..
-cd aitodtoolkit
+* Required environment (make the conda env using using 'data/aitod/AI-TOD/conda_env_aitod.yml' file)
+'''
+conda env create -f conda_env_aitod.yml
+conda activate aitod
 pip install -r requirements.txt
-```
+'''
+
+* [mmcv](https://github.com/open-mmlab/mmcv)  install mmcv==1.0 (don't isntall mmcv 2.0 version which is default)
+
+'''
+pip install mmcv==1.0.0 -f https://download.openmmlab.com/mmcv/dist/cu118/torch2.0/index.html
+
+'''
+
 
 **Step 4:** Run the E2E aitodtoolkit and get AI-TOD, it might take around an hour, then the full image sets of AI-TOD can be found in the **aitod** folder. And you can delete other files in other folders to avoid taking up too much space.
 
