@@ -1,5 +1,7 @@
-*.png
-*.tif
-*.txt
-*.json
-*json
+*/**/*.tif
+*/**/*.png
+aitodtoolkit/aitod/annotations/aitod*
+*/**/*.geojson
+aitodtoolkit/xview/xview_aitod_sets/
+aitodtoolkit/xview/split/labels
+aitodtoolkit/xview/filtered/labels
